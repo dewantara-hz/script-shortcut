@@ -43,23 +43,23 @@ fi
 # Functions
 function kubeinfo () {
     # Context
-    echo -e "${ORANGE}Context${NC}"
+    echo "${ORANGE}Context${NC}"
     echo $context
     echo ''
 
     # Namespace
-    echo -e "${ORANGE}Namespace${NC}"
+    echo "${ORANGE}Namespace${NC}"
     echo $namespace
     echo ''
 
     # Deployments
-    echo -e "${ORANGE}Deployments${NC}"
+    echo "${ORANGE}Deployments${NC}"
     command="kubectl get deployments -o wide $params"
     eval $command
     echo ''
 
     # Ingress
-    echo -e "${ORANGE}Ingresses${NC}"
+    echo "${ORANGE}Ingresses${NC}"
     command="kubectl get ingress -o wide $params"
     eval $command
     echo ''
@@ -68,7 +68,7 @@ function kubeinfo () {
     echo ''
 
     # Services
-    echo -e "${ORANGE}Services${NC}"
+    echo "${ORANGE}Services${NC}"
     command="kubectl get services -o wide $params"
     eval $command
     echo ''
@@ -77,67 +77,67 @@ function kubeinfo () {
     echo ''
 
     # Endpoints
-    echo -e "${ORANGE}Endpoints${NC}"
+    echo "${ORANGE}Endpoints${NC}"
     command="kubectl get endpoints -o wide $params"
     eval $command
     echo ''
 
     # Configmaps
-    echo -e "${ORANGE}Configmaps${NC}"
+    echo "${ORANGE}Configmaps${NC}"
     command="kubectl get configmap -o wide $params"
     eval $command
     echo ''
 
     # Secrets
-    echo -e "${ORANGE}Secrets${NC}"
+    echo "${ORANGE}Secrets${NC}"
     command="kubectl get secret -o wide $params"
     eval $command
     echo ''
 
     # HPA
-    echo -e "${ORANGE}HPA${NC}"
+    echo "${ORANGE}HPA${NC}"
     command="kubectl get hpa -o wide $params"
     eval $command
     echo ''
 
     # ResourceQuota
-    echo -e "${ORANGE}ResourceQuota${NC}"
+    echo "${ORANGE}ResourceQuota${NC}"
     command="kubectl get resourcequota -o wide $params"
     eval $command
     echo ''
 
     # Cronjobs
-    echo -e "${ORANGE}Cronjobs${NC}"
+    echo "${ORANGE}Cronjobs${NC}"
     command="kubectl get cronjob -o wide $params"
     eval $command
     echo ''
 
     # Statefulsets
-    echo -e "${ORANGE}Statefulsets${NC}"
+    echo "${ORANGE}Statefulsets${NC}"
     command="kubectl get statefulset -o wide $params"
     eval $command
     echo ''
 
     # PersistentVolumeClaims
-    echo -e "${ORANGE}PesistentVolumeClaims${NC}"
+    echo "${ORANGE}PesistentVolumeClaims${NC}"
     command="kubectl get persistentvolumeclaim -o wide $params"
     eval $command
     echo ''
 
     # Jobs
-    echo -e "${ORANGE}Jobs${NC}"
+    echo "${ORANGE}Jobs${NC}"
     command="kubectl get jobs -o wide $params"
     eval $command
     echo ''
 
     # Replica sets
-    echo -e "${ORANGE}Replica sets${NC}"
+    echo "${ORANGE}Replica sets${NC}"
     command="kubectl get rs -o wide $params"
     eval $command
     echo ''
 
     # Pods
-    echo -e "${ORANGE}Pods${NC}"
+    echo "${ORANGE}Pods${NC}"
     command="kubectl get pods -o wide $params"
     eval $command
     echo ''
